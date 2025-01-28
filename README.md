@@ -98,7 +98,4 @@ The Emerging Markets Investor Helper is a Python-based application that empowers
 4. **Video Walkthrough:**
    - A demonstration of the app's features, code structure, and implementation trade-offs.
 
----
-
-This project offers a rich combination of quantitative analysis, sentiment modeling, and visualization while addressing the challenges of investing in emerging markets. It’s practical, impactful, and aligns well with the goals of the final project rubric. Let me know if you'd like further customization!
 
