@@ -1,0 +1,10 @@
+// settings.json
+{
+    "python.linting.enabled": true,
+    "python.formatting.provider": "black",
+    "python.linting.flake8Enabled": true,
+    "files.exclude": {
+      "**/__pycache__": true,
+      "data/raw": true  // Exclude large raw data files
+    }
+  }
