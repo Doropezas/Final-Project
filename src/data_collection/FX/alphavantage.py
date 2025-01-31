@@ -7,7 +7,7 @@ from alpha_vantage.foreignexchange import ForeignExchange
 from alpha_vantage.timeseries import TimeSeries
 
 # Set API Key
-api_key = "OQ3FOJ4Q6J6G1J55"
+api_key = ""
 
 # Initialize Foreign Exchange API
 fx = ForeignExchange(key=api_key, output_format="pandas")
