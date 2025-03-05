@@ -6,3 +6,7 @@ alpha_vantage>=3.0.0
 vaderSentiment>=3.3.2
 ppyaml
 scikit-learn
+transformers
+torch
+torchvision
+torchaudio
