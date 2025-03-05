@@ -1,0 +1,18 @@
+indicators:
+  Economic Growth:
+    - NY.GDP.MKTP.KD.ZG  # GDP growth (World Bank)
+    - IP.JRN.IST.CD      # Industrial production
+  Inflation:
+    - FP.CPI.TOTL.ZG     # CPI
+    - ICP.INFRASTR       # Inflation expectations (custom mapping)
+  Monetary Policy:
+    - FR.INR.RINR        # Interest rates
+    - FM.LBL.BMNY.GD.ZS  # Money supply
+  Fiscal Health:
+    - GC.DOD.TOTL.GD.ZS  # Debt-to-GDP
+    - GC.BAL.CASH.GD.ZS  # Budget balance
+  External Factors:
+    - BN.CAB.XOKA.GD.ZS  # Current account
+    - FI.RES.TOTL.CD     # Foreign reserves
+  Political Stability:
+    - GE.PESTAB.RANK     # Political stability rank (WGI)

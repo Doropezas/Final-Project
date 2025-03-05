@@ -1,0 +1,20 @@
+fx_pairs:
+  Asia:
+    - USDIDR  # Indonesia
+    - USDMYR  # Malaysia
+    - USDTHB  # Thailand
+    - USDCNY  # China
+    - USDINR  # India
+  Latin America:
+    - USDMXN  # Mexico
+    - USDBRL  # Brazil
+    - USDCOP  # Colombia
+    - USDCLP  # Chile 
+    - USDPEN  # Peru 
+  EMEA:
+    - USDZAR  # South Africa
+    - USDPLN  # Poland
+    - USDHUF  # Hungary
+    - USDTRY  # Turkey 
+    - USDCZK  # Czech Rep
+    - USDEGP  # Egypt

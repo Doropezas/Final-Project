@@ -1,0 +1,15 @@
+news_keywords:
+  - "GDP growth"
+  - "inflation"
+  - "interest rates"
+  - "currency crisis"
+  - "debt-to-GDP"
+  - "foreign exchange"
+  - "central bank"
+  - "budget deficit"
+  - "emerging markets"
+
+countries:
+  Asia: [Indonesia, Malaysia, Thailand, China, India]
+  Latin_America: [Mexico, Brazil, Colombia, Chile, Peru]
+  EMEA: ["South Africa", Poland, Hungary, Romania, "Czech Republic", Turkey, Egypt]

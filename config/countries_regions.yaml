@@ -1,0 +1,7 @@
+regions:
+  Asia:
+    countries: [IDN, MYS, THA, CHN, IND]
+  Latin America:
+    countries: [MEX, BRA, COL, CHL, PER]  
+  EMEA:
+    countries: [ZAF, POL, HUN, ROU, CZE, TUR, EGY]  
