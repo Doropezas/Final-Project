@@ -62,7 +62,7 @@ def main():
                     data = fetch_country_indicator(country, indicator)
                     if data:
                         save_data(data, country, indicator)
-                    time.sleep(1)  # Respect API rate limits
+                        
 
 if __name__ == "__main__":
     main()

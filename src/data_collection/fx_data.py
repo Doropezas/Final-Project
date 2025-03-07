@@ -41,8 +41,6 @@ def fetch_save_fx_rates():
                 data.to_csv(region_path / filename)
                 print(f"Saved {pair} data to {filename}")
                 
-                # Brief pause between requests to help with rate limits
-                time.sleep(1)
                 
             except Exception as e:
                 print(f"Failed to fetch {pair}: {str(e)}")
