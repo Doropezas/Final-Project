@@ -24,7 +24,7 @@ The Emerging Markets Investor Helper is a Python-based application that empowers
 
 ### 4. News Sentiment Analysis:
 - Use financial news APIs (e.g., Reuters, Google News) or web scraping tools (e.g., Beautiful Soup) to gather headlines and articles for emerging markets.
-- Apply NLP techniques (e.g., sentiment scoring with Hugging Face, TextBlob, or Vader) to gauge market sentiment.
+- Apply NLP techniques (e.g., sentiment scoring with Hugging Face) to gauge market sentiment.
 - Summarize sentiment trends at the country or sector level.
 
 ### 5. Investment Report Generator:

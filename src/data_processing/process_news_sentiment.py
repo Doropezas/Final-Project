@@ -1,17 +1,26 @@
 import pandas as pd
+import yaml
 from pathlib import Path
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 from transformers import pipeline
 import numpy as np
 
-DATA_PATH = Path(__file__).parent.parent.parent / "data"
+PROJECT_ROOT = Path(__file__).parent.parent.parent 
+
+DATA_PATH = PROJECT_ROOT / "data"
+CONFIG_PATH = PROJECT_ROOT / "config"
 
 class NewsSentimentProcessor:
     def __init__(self):
         self.analyzer = SentimentIntensityAnalyzer()
         self.hf_pipeline = pipeline("sentiment-analysis", 
                                    model="finiteautomata/bertweet-base-sentiment-analysis")
+        self.country_map = self._load_country_mapping()
     
+    def _load_country_mapping(self):
+        with open(CONFIG_PATH / "countries_regions.yaml") as f:
+            return yaml.safe_load(f)['country_mapping']
+
     def _load_raw_news(self) -> pd.DataFrame:
         """Load all raw news articles"""
         news_files = (DATA_PATH / "raw/news").rglob("*.parquet")
@@ -20,7 +29,8 @@ class NewsSentimentProcessor:
         for file in news_files:
             try:
                 df = pd.read_parquet(file)
-                df['country'] = file.parent.name  # Extract country from directory
+                country_name = file.parent.name.replace("_", " ")
+                df['country'] = self.country_map.get(country_name, "UNKNOWN")
                 dfs.append(df)
             except Exception as e:
                 print(f"Error loading {file}: {str(e)}")
@@ -51,11 +61,12 @@ class NewsSentimentProcessor:
         
         # Aggregate by country and date
         news_df['date'] = pd.to_datetime(news_df['publishedAt']).dt.date
-        aggregated = news_df.groupby(['country', 'date']).agg(
+        aggregated = news_df.groupby(['country']).agg(
             avg_sentiment=('sentiment', 'mean'),
             article_count=('sentiment', 'count')
         ).reset_index()
         
+
         # Save processed data
         output_path = DATA_PATH / "processed/news_sentiment.parquet"
         output_path.parent.mkdir(parents=True, exist_ok=True)

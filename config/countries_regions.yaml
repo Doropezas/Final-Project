@@ -5,3 +5,27 @@ regions:
     countries: [MEX, BRA, COL, CHL, PER]  
   EMEA:
     countries: [ZAF, POL, HUN, ROU, CZE, TUR, EGY]  
+
+country_mapping:
+  # Latin America
+  Brazil: BRA
+  Mexico: MEX
+  Colombia: COL
+  Chile: CHL
+  Peru: PER
+  
+  # Asia
+  Indonesia: IDN
+  Malaysia: MYS
+  Thailand: THA
+  China: CHN
+  India: IND
+  
+  # EMEA
+  "South Africa": ZAF
+  Poland: POL
+  Hungary: HUN
+  Romania: ROU
+  "Czech Republic": CZE
+  Turkey: TUR
+  Egypt: EGY

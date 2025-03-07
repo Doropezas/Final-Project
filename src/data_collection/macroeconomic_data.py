@@ -1,4 +1,3 @@
-# src/data_collection/macroeconomic_data.py
 import requests
 import yaml
 import pandas as pd
@@ -16,7 +15,14 @@ def load_config(file: str) -> dict:
 
 def fetch_country_indicator(country: str, indicator: str) -> dict:
     """Fetch single indicator for a country"""
-    url = f"http://api.worldbank.org/v2/country/{country}/indicator/{indicator}?format=json"
+    start_year = 2015
+    current_year = datetime.now().year
+    # Append date range parameters to the URL.
+    url = (
+        f"http://api.worldbank.org/v2/country/{country}/indicator/{indicator}"
+        f"?format=json&date={start_year}:{current_year}"
+    )
+    
     try:
         response = requests.get(url, timeout=10)
         response.raise_for_status()
