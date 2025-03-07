@@ -15,3 +15,4 @@ prophet
 plotly
 matplotlib
 newsapi-python
+statsmodels
